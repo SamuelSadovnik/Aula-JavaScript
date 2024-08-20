@@ -1,6 +1,6 @@
-// Objeto representando o pedido
+
 const pedidoRestaurante = {
-    cliente: 'João Silva',
+    cliente: 'Samu',
     pratos: [],
     total: 0,
   
@@ -18,15 +18,17 @@ const pedidoRestaurante = {
       console.log(`Cliente: ${this.cliente}`);
       console.log('Pratos pedidos:');
       this.pratos.forEach((prato, index) => {
-        console.log(`${index + 1}. ${prato.nome} - R$${prato.preco.toFixed(2)}`);
+        console.log(`${index + 1}. ${prato.nome} - R$${prato.preco}`);
       });
-      console.log(`Total: R$${this.total.toFixed(2)}`);
+      console.log(`Total: R$${this.total}`);
     }
   };
   
-  pedidoRestaurante.adicionarPrato({ nome: 'Lasanha', preco: 25.50 });
-  pedidoRestaurante.adicionarPrato({ nome: 'Salada', preco: 15.00 });
-  pedidoRestaurante.adicionarPrato({ nome: 'Suco de Laranja', preco: 8.00 });
+  pedidoRestaurante.adicionarPrato({ nome: 'Sushi', preco: 199 });
+  pedidoRestaurante.adicionarPrato({ nome: 'Picanha', preco: 80 });
+  pedidoRestaurante.adicionarPrato({ nome: 'Coca-Cola', preco: 5 });
+  pedidoRestaurante.adicionarPrato({ nome: 'Pizza', preco: 79})
+  pedidoRestaurante.adicionarPrato({ nome: 'Terere', preco: 5})
 
   pedidoRestaurante.exibirResumo(); 
   
